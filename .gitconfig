@@ -16,9 +16,6 @@
 [user]
 	name = Calvin Yu
 	email = csyu77@gmail.com
-[github]
-	user = cyu
-	token = b3d965f4a1d7b03e87a32bd9c93f54aa
 [alias]
 	st = status
  	ci = commit
