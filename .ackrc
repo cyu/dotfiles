@@ -1,0 +1,9 @@
+--ignore-dir=generated
+--ignore-dir=linkreports
+--ignore-dir=tmp
+--ignore-dir=log
+--ignore-dir=logs
+
+--type-add=ruby=.rake,.sass
+--type-add=js=.json
+--type-add=css=.less
