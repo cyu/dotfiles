@@ -1,16 +1,23 @@
+function load_modules() {
+    if [[ -d "$1" ]]; then
+        for module in $(ls $1); do
+            . $1/$module
+        done
+    else
+        echo "Unable to load modules in $1 (directory does not exist)"
+    fi
+}
+
 # General Aliases
 alias ls='ls -G'
 alias ll='ls -la'
 
-PATH="$HOME/bin:$PATH"
-
-# SHOW GIT INFO IN PROMPT
-source /usr/local/etc/bash_completion.d/git-completion.bash
-export PS1='\W\[\033[32m\]$(__git_ps1) \[\033[0m\]$ '
-
-# RVM
-if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
+load_modules $HOME/.dotfiles/modules
 
 if [[ -a ~/.bashrc-private ]]; then
     . ~/.bashrc-private
+fi
+
+if [[ -d ~/bin ]]; then
+    PATH=$HOME/bin:$PATH
 fi
