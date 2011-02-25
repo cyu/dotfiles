@@ -10,5 +10,9 @@ set et
 set ts=2
 
 au BufRead *.as set filetype=actionscript ts=4
+au BufRead *.json set filetype=javascript
+au BufRead *.php set ts=4
 
 syn on
+
+map <C-t> :FufFile<CR>
