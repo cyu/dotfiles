@@ -15,4 +15,4 @@ au BufRead *.php set ts=4
 
 syn on
 
-map <C-t> :FufCoverage<CR>
+map <C-t> :FufCoverageFile<CR>
