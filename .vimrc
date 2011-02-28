@@ -8,6 +8,8 @@ set ai
 set bg=dark
 set et
 set ts=2
+set number
+set hidden
 
 au BufRead *.as set filetype=actionscript ts=4
 au BufRead *.json set filetype=javascript
