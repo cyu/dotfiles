@@ -13,6 +13,7 @@ set hidden
 
 au BufRead *.as set filetype=actionscript ts=4
 au BufRead *.json set filetype=javascript
+au BufRead *.jsfl set filetype=javascript
 au BufRead *.php set ts=4
 
 syn on
