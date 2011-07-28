@@ -4,6 +4,6 @@
 --ignore-dir=log
 --ignore-dir=logs
 
---type-add=ruby=.rake,.sass
+--type-add=ruby=.rake,.sass,.builder
 --type-add=js=.json
---type-add=css=.less
+--type-add=css=.less,.scss
