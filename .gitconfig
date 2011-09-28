@@ -18,13 +18,16 @@
 	email = csyu77@gmail.com
 [alias]
 	st = status
- 	ci = commit
+	ci = commit
 	br = branch
 	co = checkout
 	df = diff -b
-	lg = log -p
 	diff = diff -b
+	staged = diff -b --staged
+	amend = commit --amend
 [branch]
 	autosetupmerge = true
 [push]
 	default = tracking
+[format]
+	pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
