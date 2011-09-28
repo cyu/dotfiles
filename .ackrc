@@ -7,3 +7,4 @@
 --type-add=ruby=.rake,.sass,.builder
 --type-add=js=.json
 --type-add=css=.less,.scss
+--type-add=html=.markdown
