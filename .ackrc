@@ -8,3 +8,5 @@
 --type-add=js=.json
 --type-add=css=.less,.scss
 --type-add=html=.markdown
+
+--type-set=coffee=.coffee
