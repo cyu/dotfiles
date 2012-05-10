@@ -10,6 +10,8 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tmux="TERM=screen-256color-bce tmux"
+alias spec="ruby -I spec"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -29,7 +31,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm ruby rails rake)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,12 +42,18 @@ PATH=$HOME/bin:$PATH
 # Need my vi edit mode
 set -o vi
 
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 # Load local configuration
 if [ -f $HOME/.zshrc-private ]; then
   source $HOME/.zshrc-private
 fi
 
 # Set editors
-BUNDLER_EDITOR=mate
-GEM_OPEN_EDITOR=mate
+export BUNDLER_EDITOR=vi
+export GEM_OPEN_EDITOR=vi
 
+[ -n "$TMUX" ] && export TERM=screen-256color
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
