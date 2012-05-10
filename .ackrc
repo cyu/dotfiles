@@ -10,3 +10,5 @@
 --type-add=html=.markdown
 
 --type-set=coffee=.coffee
+
+--pager=less -R
