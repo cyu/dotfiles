@@ -4,10 +4,10 @@
 --ignore-dir=log
 --ignore-dir=logs
 
---type-add=ruby=.rake,.sass,.builder
+--type-add=ruby=.rake,.sass,.builder,.ru
 --type-add=js=.json
 --type-add=css=.less,.scss
---type-add=html=.markdown
+--type-add=html=.markdown,.deface
 
 --type-set=coffee=.coffee
 
