@@ -24,8 +24,8 @@
 	df = diff -b
 	staged = diff -b --staged
 	amend = commit --amend
-  brl = for-each-ref --sort=-committerdate refs/heads --format='%(committerdate:short) %(refname:short)'
-  l = log --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
+	brl = for-each-ref --sort=-committerdate refs/heads --format='%(committerdate:short) %(refname:short)'
+	l = log --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
 [branch]
 	autosetuprebase = always
 [push]
