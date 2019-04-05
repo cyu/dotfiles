@@ -5,9 +5,9 @@
 --ignore-dir=logs
 
 --type-add=ruby=.rake,.sass,.builder,.ru
---type-add=js=.json
---type-add=css=.less,.scss
---type-add=html=.markdown,.deface
+--type-add=js=.json,.jsx
+--type-add=css=.less,.scss,.sass
+--type-add=html=.markdown,.deface,.haml
 
 --type-set=coffee=.coffee
 

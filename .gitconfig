@@ -15,7 +15,7 @@
 	untracked = cyan
 [user]
 	name = Calvin Yu
-	email = calvin@scoutmob.com
+	email = me@sourcebender.com
 [alias]
 	st = status
 	ci = commit
@@ -26,6 +26,8 @@
 	amend = commit --amend
 	brl = for-each-ref --sort=-committerdate refs/heads --format='%(committerdate:short) %(refname:short)'
 	l = log --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
+  up = !git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`
+  branch-cleanup = !sh -c 'git branch --merged | grep -v ${DEV_BRANCH:-master} | xargs git branch -d && git remote prune origin'
 [branch]
 	autosetuprebase = always
 [push]
