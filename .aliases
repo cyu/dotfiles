@@ -11,3 +11,4 @@ alias tn='tmux new -s'
 alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
 
 alias dc='docker-compose'
+alias dcr='docker-compose run --rm'

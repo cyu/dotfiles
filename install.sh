@@ -12,4 +12,5 @@ ln -nfs $DIR_NAME/.screenrc .
 ln -nfs $DIR_NAME/.vimrc .
 ln -nfs $DIR_NAME/.gemrc .
 ln -nfs $DIR_NAME/.tmux.conf .
-ln -nfs $DIR_NAME/.bash_aliases .
+ln -nfs $DIR_NAME/.aliases .
+ln -nfs $DIR_NAME/.zshrc .
