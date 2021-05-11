@@ -15,7 +15,7 @@
 	untracked = cyan
 [user]
 	name = Calvin Yu
-	email = me@sourcebender.com
+	email = calvin@rylabs.io
 [alias]
 	st = status
 	ci = commit
