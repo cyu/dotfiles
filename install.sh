@@ -1,16 +1,16 @@
 #!/bin/bash
 
-DIR=`dirname $0`
-DIR_NAME=`basename $DIR`
+DIR=$(dirname $0)
+DIR_NAME=$(realpath $DIR)
 cd $DIR/..
 
-ln -nfs $DIR_NAME/.ackrc .
-ln -nfs $DIR_NAME/.gitconfig .
-ln -nfs $DIR_NAME/.inputrc .
-ln -nfs $DIR_NAME/.irbrc .
-ln -nfs $DIR_NAME/.screenrc .
-ln -nfs $DIR_NAME/.vimrc .
-ln -nfs $DIR_NAME/.gemrc .
-ln -nfs $DIR_NAME/.tmux.conf .
-ln -nfs $DIR_NAME/.aliases .
-ln -nfs $DIR_NAME/.zshrc .
+ln -nfs $DIR_NAME/.ackrc $HOME
+ln -nfs $DIR_NAME/.gitconfig $HOME
+ln -nfs $DIR_NAME/.inputrc $HOME
+ln -nfs $DIR_NAME/.irbrc $HOME
+ln -nfs $DIR_NAME/.screenrc $HOME
+ln -nfs $DIR_NAME/.vimrc $HOME
+ln -nfs $DIR_NAME/.gemrc $HOME
+ln -nfs $DIR_NAME/.tmux.conf $HOME
+ln -nfs $DIR_NAME/.aliases $HOME
+ln -nfs $DIR_NAME/.zshrc $HOME
