@@ -14,7 +14,7 @@ ln -nfs $DIR_NAME/.gemrc $HOME
 ln -nfs $DIR_NAME/.tmux.conf $HOME
 ln -nfs $DIR_NAME/.zshrc $HOME
 
-if [ $SHELL == "/bin/bash" ]
+if [ "$SHELL" = "/bin/bash" ]
 then
   ln -nfs $DIR_NAME/.aliases $HOME/.bash_aliases
 fi
