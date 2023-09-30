@@ -18,3 +18,7 @@ if [ "$SHELL" = "/bin/bash" ]
 then
   ln -nfs $DIR_NAME/.aliases $HOME/.bash_aliases
 fi
+
+mkdir -p $DIR_NAME/.config/git
+ln -nfs $DIR_NAME/.gitattributes $HOME/.config/git/gitattributes
+
