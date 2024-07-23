@@ -17,6 +17,7 @@ ln -nfs $DIR_NAME/.zshrc $HOME
 if [ "$SHELL" = "/bin/bash" ]
 then
   ln -nfs $DIR_NAME/.aliases $HOME/.bash_aliases
+  $HOME/.bashrc << "source ${DIR_NAME}/bashrc_cyu"
 fi
 
 mkdir -p $DIR_NAME/.config/git

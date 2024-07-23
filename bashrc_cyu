@@ -1,0 +1,5 @@
+if [ -f /.dockerenv ]; then
+  if [ -f "${PWD}/.ruby-version" ]; then
+    __rvm_project_rvmrc
+  fi
+fi
