@@ -1,25 +1,30 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-DIR=$(dirname $0)
-DIR_NAME=$(realpath $DIR)
-cd $DIR/..
+# Copied from https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh
 
-ln -nfs $DIR_NAME/.ackrc $HOME
-ln -nfs $DIR_NAME/.gitconfig $HOME
-ln -nfs $DIR_NAME/.inputrc $HOME
-ln -nfs $DIR_NAME/.irbrc $HOME
-ln -nfs $DIR_NAME/.screenrc $HOME
-ln -nfs $DIR_NAME/.vimrc $HOME
-ln -nfs $DIR_NAME/.gemrc $HOME
-ln -nfs $DIR_NAME/.tmux.conf $HOME
-ln -nfs $DIR_NAME/.zshrc $HOME
+cd "$(dirname "${BASH_SOURCE}")";
 
-if [ "$SHELL" = "/bin/bash" ]
-then
-  ln -nfs $DIR_NAME/.aliases $HOME/.bash_aliases
-  $HOME/.bashrc << "source ${DIR_NAME}/bashrc_cyu"
-fi
+git pull origin main;
 
-mkdir -p $DIR_NAME/.config/git
-ln -nfs $DIR_NAME/.gitattributes $HOME/.config/git/gitattributes
+function doIt() {
+	rsync --exclude ".git/" \
+		--exclude ".DS_Store" \
+		--exclude ".osx" \
+		--exclude "bootstrap.sh" \
+		--exclude "README.md" \
+		--exclude "LICENSE-MIT.txt" \
+		-avh --no-perms . ~;
+  echo 'source ${HOME}/.bashrc_cyu' >> ~/.bashrc
+	source ~/.profile;
+}
 
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+	doIt;
+else
+	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+	echo "";
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+		doIt;
+	fi;
+fi;
+unset doIt;

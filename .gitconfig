@@ -36,3 +36,5 @@
 	attributesfile = /Users/cyu/.config/git/gitattributes
 [diff "rspec"]
   xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario|background)[ \t].*)$"
+[credential]
+	helper = "!f() { /home/vscode/.vscode-server/bin/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/node /tmp/vscode-remote-containers-c4b920e5-0834-411b-91e9-01f93fffdda7.js git-credential-helper $*; }; f"
