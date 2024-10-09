@@ -5,7 +5,7 @@
 cd "$(dirname "${BASH_SOURCE}")";
 
 if [ -d ".git" ]; then
-  git pull origin main;
+  git pull origin master;
 fi;
 
 function doIt() {
