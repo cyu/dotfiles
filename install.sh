@@ -4,7 +4,9 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin main;
+if [ -d ".git" ]; then
+  git pull origin main;
+fi;
 
 function doIt() {
 	rsync --exclude ".git/" \
