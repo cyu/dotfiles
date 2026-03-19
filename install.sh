@@ -17,8 +17,23 @@ rsync --exclude ".git/" \
   --exclude "LICENSE-MIT.txt" \
   --exclude ".claude/settings.json" \
   -avh --no-perms . ~;
-echo 'source ${HOME}/.bashrc_cyu' >> ~/.bashrc;
 source ~/.profile;
+
+# Bash-specific setup: source custom bashrc and symlink .aliases to .bash_aliases
+if [ -n "$BASH_VERSION" ]; then
+  if ! grep -qF '.bashrc_cyu' ~/.bashrc 2>/dev/null; then
+    echo 'source ${HOME}/.bashrc_cyu' >> ~/.bashrc;
+  fi
+
+  ln -sf "${HOME}/.aliases" "${HOME}/.bash_aliases"
+fi
+
+# Zsh-specific setup: source custom zshrc
+if [ -n "$ZSH_VERSION" ]; then
+  if ! grep -qF '.zshrc_cyu' ~/.zshrc 2>/dev/null; then
+    echo 'source ${HOME}/.zshrc_cyu' >> ~/.zshrc;
+  fi
+fi
 
 # Merge .claude/settings.json (local file values take precedence)
 CLAUDE_SETTINGS_SRC="$(dirname "${BASH_SOURCE}")/.claude/settings.json"
