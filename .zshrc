@@ -1,1 +1,1 @@
-source $HOME/.aliases
+source $HOME/.bash_aliases
