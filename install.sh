@@ -20,7 +20,7 @@ rsync --exclude ".git/" \
 source ~/.profile;
 
 # Bash-specific setup: source custom bashrc and symlink .aliases to .bash_aliases
-if [ -n "$BASH_VERSION" ]; then
+if [ -f "$HOME/.bashrc" ]; then
   if ! grep -qF '.bashrc_cyu' ~/.bashrc 2>/dev/null; then
     echo 'source ${HOME}/.bashrc_cyu' >> ~/.bashrc;
   fi
@@ -29,7 +29,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Zsh-specific setup: source custom zshrc
-if [ -n "$ZSH_VERSION" ]; then
+if [ -f "$HOME/.zshrc" ]; then
   if ! grep -qF '.zshrc_cyu' ~/.zshrc 2>/dev/null; then
     echo 'source ${HOME}/.zshrc_cyu' >> ~/.zshrc;
   fi
