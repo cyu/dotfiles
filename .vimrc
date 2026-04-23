@@ -1,8 +1,8 @@
 " Needed on some linux distros.  " see http://www.adamlowe.me/2009/12/vim-destroys-all-other-rails-editors.html
 "filetype on
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
 
 set ai
 set et
@@ -30,5 +30,5 @@ nnoremap <silent> <leader>b :CommandTBuffer<CR>
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 "Powerline
-set rtp+=/Users/cyu/.vim/bundle/powerline/powerline/bindings/vim
-set laststatus=2
+"set rtp+=/Users/cyu/.vim/bundle/powerline/powerline/bindings/vim
+"set laststatus=2
