@@ -12,8 +12,8 @@ echo 'Installing dotfiles...';
 rsync --exclude ".git/" \
   --exclude ".DS_Store" \
   --exclude ".osx" \
-  --exclude "bootstrap.sh" \
-  --exclude "README.md" \
+  --exclude "install.sh" \
+  --exclude "README" \
   --exclude "LICENSE-MIT.txt" \
   --exclude ".claude/settings.json" \
   -avh --no-perms . ~;
